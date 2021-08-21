@@ -16,8 +16,8 @@ let signup = () => {
 
             firebase.database().ref(`users/${res.user.uid}`).set(user)
                 .then(() => {
-                    alert("Registration Successfully")
-                    window.location.href = "login.html"
+                    
+                    window.location.href="login.html";
                 })
 
         })
