@@ -1,58 +1,3 @@
-// signup = () => {
-//     var username = document.getElementById("username")
-//     var email = document.getElementById("email")
-//     var password = document.getElementById("password")
-
-
-//     firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
-//         .then((res) => {
-//             let user = {
-//                 username: username.value,
-//                 email: email.value,
-//                 password: password.value
-
-//             }
-//             firebase.database().ref("users").set(user)
-//                 .then((res) => {
-//                     alert("signup successfuly")
-//                     window.location = "login.html"
-//                 })
-
-//         })
-//         .catch((err) => {
-//             console.log("err=>", err)
-//         })
-
-
-//     console.log(username.value)
-//     console.log(email.value)
-//     console.log(password.value)
-
-// }
-
-// login = () => {
-
-//     var email = document.getElementById("email")
-//     var password = document.getElementById("password")
-
-//     firebase.auth().signInWithEmailAndPassword(email.value, password.value)
-//         .then((res) => {
-
-//             firebase.database().ref(`users/${res.user.uid}`).once('value', (data) => {
-//                 alert("data.val()")
-//                 // window.location = "login.html"
-//             })
-
-//         })
-//         .catch((err) => {
-//             console.log('err=>', err)
-
-//         })
-
-//     console.log(email.value)
-//     console.log(password.value)
-
-// }
 
 
 //----------------------signup------------------//
@@ -72,7 +17,7 @@ let signup = () => {
             firebase.database().ref(`users/${res.user.uid}`).set(user)
                 .then(() => {
                     alert("User register hogaya")
-                    window.location = "login.html"
+                    window.location.href = "login.html"
                 })
 
         })
