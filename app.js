@@ -16,7 +16,6 @@ let signup = () => {
 
             firebase.database().ref(`users/${res.user.uid}`).set(user)
                 .then(() => {
-                    
                     window.location.href="login.html";
                 })
 
